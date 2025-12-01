@@ -1,0 +1,106 @@
+{
+  "name": "cleanroom-lodash",
+  "version": "0.1.0",
+  "description": "Clean-room recreation of a Lodash-style utility toolkit.",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/lodash.cjs",
+  "module": "dist/lodash.esm.js",
+  "exports": {
+    ".": {
+      "import": "./dist/lodash.esm.js",
+      "require": "./dist/lodash.cjs"
+    },
+    "./core": {
+      "import": "./dist/lodash.core.esm.js",
+      "require": "./dist/lodash.core.cjs"
+    },
+    "./fp": {
+      "import": "./dist/lodash.fp.esm.js",
+      "require": "./dist/lodash.fp.cjs"
+    },
+    "./fp/object": {
+      "import": "./dist/fp.object.esm.js",
+      "require": "./dist/fp.object.cjs"
+    },
+    "./fp/collection": {
+      "import": "./dist/fp.collection.esm.js",
+      "require": "./dist/fp.collection.cjs"
+    },
+    "./array": {
+      "import": "./dist/array.esm.js",
+      "require": "./dist/array.cjs"
+    },
+    "./collection": {
+      "import": "./dist/collection.esm.js",
+      "require": "./dist/collection.cjs"
+    },
+    "./object": {
+      "import": "./dist/object.esm.js",
+      "require": "./dist/object.cjs"
+    },
+    "./string": {
+      "import": "./dist/string.esm.js",
+      "require": "./dist/string.cjs"
+    },
+    "./number": {
+      "import": "./dist/number.esm.js",
+      "require": "./dist/number.cjs"
+    },
+    "./function": {
+      "import": "./dist/function.esm.js",
+      "require": "./dist/function.cjs"
+    },
+    "./lang": {
+      "import": "./dist/lang.esm.js",
+      "require": "./dist/lang.cjs"
+    },
+    "./util": {
+      "import": "./dist/util.esm.js",
+      "require": "./dist/util.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "utility",
+    "lodash",
+    "functional",
+    "array",
+    "fp"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://example.com/cleanroom-lodash.git"
+  },
+  "bugs": {
+    "url": "https://example.com/cleanroom-lodash/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "clean": "rimraf dist coverage",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "lint": "eslint .",
+    "check": "npm run lint && npm run test"
+  },
+  "sideEffects": false,
+  "devDependencies": {
+    "@eslint/js": "^9.12.0",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "eslint": "^9.12.0",
+    "globals": "^15.9.0",
+    "rimraf": "^6.0.1",
+    "rollup": "^4.21.0",
+    "vitest": "^1.2.2"
+  }
+}
